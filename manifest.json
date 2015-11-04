@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Heart to Communism",
+  "version": "0.1",
+
+  "permissions": ["https://twitter.com/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "css": ["overrides.css"],
+      "js": ["overrides.js"]
+    }
+  ],
+
+  "web_accessible_resources": ["*.png"]
+}

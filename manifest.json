@@ -4,7 +4,8 @@
   "version": "0.1",
   "description": "Replaces Twitter’s “Like” button with a “Communism” button",
   "icons": {
-    "128": "icon128.png"
+    "128": "icon128.png",
+    "48": "icon48.png"
   },
 
   "permissions": ["https://twitter.com/*"],

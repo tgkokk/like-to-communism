@@ -17,7 +17,7 @@
       var textNode = el.childNodes[0];
       if (textNode) {
         var oldValue = textNode.textContent;
-        var newValue = oldValue.replace(/Likes/, 'Communism');
+        var newValue = oldValue.replace(/Like(s?)/, 'Communism');
         if (newValue != oldValue) {
           textNode.textContent = newValue;
         }

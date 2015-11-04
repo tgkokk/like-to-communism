@@ -1,5 +1,5 @@
 (function() {
-  function checkForLikeButtons() {
+  function checkForLikes() {
     var tooltips = document.querySelectorAll(".ProfileTweet-action--favorite .IconContainer");
 
     [].slice.call(tooltips).forEach(function(el){
@@ -10,10 +10,23 @@
         el.setAttribute(attribute, newValue);
       }
     });
+
+    var labels = document.querySelectorAll(".request-favorited-popup");
+
+    [].slice.call(labels).forEach(function(el){
+      var textNode = el.childNodes[0];
+      if (textNode) {
+        var oldValue = textNode.textContent;
+        var newValue = oldValue.replace(/Likes/, 'Communism');
+        if (newValue != oldValue) {
+          textNode.textContent = newValue;
+        }
+      }
+    });
   }
 
   function tick() {
-    checkForLikeButtons();
+    checkForLikes();
     window.setTimeout(tick, 5000);
   }
 

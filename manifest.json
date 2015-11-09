@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Like to Communism",
   "version": "0.1",
-  "description": "Replaces Twitter’s “Like” button with a “Communism” button",
+  "description": "Replaces Twitter’s “Like” button with a “Communism” button, as Twitter’s creators originally intended",
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png"

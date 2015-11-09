@@ -6,7 +6,7 @@
     if(!textNode) return;
     var oldValue = textNode.textContent;
     var newValue = oldValue
-      .replace(/liked/,"communism");
+      .replace(/like(?:d|s)/,"communism");
     if (newValue != oldValue) {
       textNode.textContent = newValue;
     }
@@ -33,8 +33,9 @@
       }
     });
 
-    // /i/notification page
-    $(".stream-item-activity-line-notification").forEach(function(el){
+    // /i/notification page (liked ur post, 2 more likes)
+    $(".stream-item-activity-line-notification, .view-all-supplements span")
+      .forEach(function(el){
       //iterate over nodes rather than access by index in case twitter's markup changes
       [].filter.call(el.childNodes, function(node){
         return node.nodeType === Node.TEXT_NODE;

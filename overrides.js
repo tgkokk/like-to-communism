@@ -6,7 +6,7 @@
     if(!textNode) return;
     var oldValue = textNode.textContent;
     var newValue = oldValue
-      .replace(/like(?:d|s)/,"communism");
+      .replace(/like[sd]?/,"communism");
     if (newValue != oldValue) {
       textNode.textContent = newValue;
     }

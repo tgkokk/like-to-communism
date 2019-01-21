@@ -1,5 +1,5 @@
 (function() {
-  var browser = (typeof window.browser === "undefined" || Object.getPrototypeOf(browser) !== Object.prototype) ? window.chrome : window.browser;
+  var browser = (typeof browser === "undefined" || Object.getPrototypeOf(browser) !== Object.prototype) ? chrome : browser;
 
   function $(selector) {
     return [].slice.call(document.querySelectorAll(selector));

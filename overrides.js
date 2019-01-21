@@ -1,4 +1,6 @@
 (function() {
+  var browser = (typeof window.browser === "undefined" || Object.getPrototypeOf(browser) !== Object.prototype) ? window.chrome : window.browser;
+
   function $(selector) {
     return [].slice.call(document.querySelectorAll(selector));
   }
@@ -41,7 +43,7 @@
         return node.nodeType === Node.TEXT_NODE;
       }).forEach(nationalize);
     });
-    
+
     //can't rely on css alone becauese `content` property is not overrideable
     $(".Icon--heartBadge").forEach(function(el){
       el.classList.remove("Icon--heartBadge");
@@ -53,6 +55,11 @@
     checkForLikes();
     window.setTimeout(tick, 5000);
   }
+
+  var styleEl = document.createElement('style');
+  document.documentElement.appendChild(styleEl);
+
+  styleEl.sheet.insertRule(".HeartAnimation { background-image: url(" + browser.runtime.getURL("web_heart_animation.png") + ") !important; }", 0);
 
   tick();
 })();
